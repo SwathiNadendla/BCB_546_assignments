@@ -212,10 +212,10 @@ ________________________________________________________________________________
 4. I have given the same command since its only for 10 chromosomes but I later thought to include a for loop there 
 # For loop for increasing order (1 to 10)
 for chr in {1..10}; do
-  # Extract SNPs for each chromosome (assuming column 2 contains chromosome info)
+  # Extract SNPs for each chromosome 
   awk -F'\t' -v chr="chr$chr" '$2 == chr' maize_SNP_with_question_mark.txt > "chr${chr}_snps.txt"
   
-  # Sort SNPs for each chromosome by position in increasing order (third column)
+  # Sort SNPs for each chromosome by position in increasing order 
   sort -k3,3n "chr${chr}_snps.txt" > "chr${chr}_sorted_increasing.txt"
 done
 
@@ -224,7 +224,7 @@ for chr in {10..1}; do
   # Extract SNPs for each chromosome
   awk -F'\t' -v chr="chr$chr" '$2 == chr' maize_SNP_joined.txt > "chr${chr}_snps.txt"
   
-  # Sort SNPs for each chromosome by position in decreasing order (third column)
+  # Sort SNPs for each chromosome by position in decreasing order
   sort -k3,3nr "chr${chr}_snps.txt" > "chr${chr}_sorted_decreasing.txt"
 done
  change 10 to 1 to 1--10 for increasing order
