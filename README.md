@@ -156,6 +156,7 @@ Transpose the maize genotypes
    awk '$2~ /1/' maize_rev_sorted.txt > maize_decreasing_chr3.txt
    awk '$2~ /1/' maize_rev_sorted.txt > maize_decreasing_chr2.txt
    awk '$2~ /1/' maize_rev_sorted.txt > maize_decreasing_chr1.txt
+   
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 ## for unkmown genotypes
  grep -w "unknown" maize_SNP_joined.txt > maize_unknown.txt
